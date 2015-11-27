@@ -5,10 +5,19 @@
  */
 package areoport;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author elliotthebert
  */
 public class areoport {
-    
+    private List<gates> portes = new ArrayList();
+    public areoport(){
+        
+    }
+    public void addGates(gates g){
+        portes.add(g);
+    }
 }
