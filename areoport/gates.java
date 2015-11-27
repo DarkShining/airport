@@ -21,21 +21,64 @@ import static areoport.TypeGates.*;
      TypeGates(String info){
          this.info = info;
      }
+     @Override
+     public String toString(){
+         return info;
+     }
 }
 public class gates {
     private int number;
     private boolean libre;
     private TypeGates type;
+    private Vol vol;
     
     public gates(){
         number = 0;
         libre = true;
         type = SMALL;
+        vol = null;
     }
     
-    public gates(int number, TypeGates type){
+    public gates(int number, TypeGates type, Vol vol){
         this.number = number;
-        this.libre = true;
         this.type = type;
+        this.libre = true;
+        this.vol = vol;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public boolean isLibre() {
+        return libre;
+    }
+
+    public TypeGates getType() {
+        return type;
+    }
+
+    public Vol getVol(){
+        return vol;
+    }
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public void setLibre(boolean libre) {
+        this.libre = libre;
+    }
+
+    public void setType(TypeGates type) {
+        this.type = type;
+    }
+    
+    public void setVol(Vol vol){
+        this.vol = vol;
+    }
+    
+    public String gatesInfo(){
+        String result = "Numero de porte: "+number+"\n"+"Type de porte: "+type.toString();
+        return  result;
     }
 }
