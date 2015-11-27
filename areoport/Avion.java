@@ -11,16 +11,16 @@ package areoport;
  */
 
 
-public class avion {
+public class Avion {
     private int nbPassager;
     private TypeAvion type;
 
-    public avion() {
+    public Avion() {
         nbPassager = 0;
         type = null;
     }
 
-    public avion(int nbPassager, TypeAvion type) {
+    public Avion(int nbPassager, TypeAvion type) {
         this.nbPassager = nbPassager;
         this.type = type;
     }

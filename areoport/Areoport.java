@@ -12,12 +12,12 @@ import java.util.List;
  *
  * @author elliotthebert
  */
-public class areoport {
-    private List<gates> portes = new ArrayList();
-    public areoport(){
+public class Areoport {
+    private List<Gates> portes = new ArrayList();
+    public Areoport(){
         
     }
-    public void addGates(gates g){
+    public void addGates(Gates g){
         portes.add(g);
     }
 }

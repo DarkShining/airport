@@ -5,26 +5,25 @@
  */
 package areoport;
 
-import static areoport.TypeGates.*;
 
 /**
  *
  * @author elliotthebert
  */
-public class gates {
+public class Gates {
     private int number;
     private boolean libre;
     private TypeGates type;
     private Vol vol;
     
-    public gates(){
+    public Gates(){
         number = 0;
         libre = true;
         type = null;
         vol = null;
     }
     
-    public gates(int number, TypeGates type, Vol vol){
+    public Gates(int number, TypeGates type, Vol vol){
         this.number = number;
         this.type = type;
         this.libre = true;

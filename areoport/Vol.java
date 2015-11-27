@@ -16,7 +16,7 @@ public class Vol {
     private LocalDate heureArrive;
     private LocalDate heureDepart;
     private LocalDate heurePourPlient;
-    private avion avion;
+    private Avion avion;
     private Vol type;
 
     public Vol() {
@@ -28,7 +28,7 @@ public class Vol {
         type = null;
     }
 
-    public Vol(int numeroVol, LocalDate heureArrive, LocalDate heureDepart, avion avion,LocalDate heurePourPlient, Vol type) {
+    public Vol(int numeroVol, LocalDate heureArrive, LocalDate heureDepart, Avion avion,LocalDate heurePourPlient, Vol type) {
         this.numeroVol = numeroVol;
         this.heureArrive = heureArrive;
         this.heureDepart = heureDepart;
@@ -57,7 +57,7 @@ public class Vol {
         return heureDepart;
     }
 
-    public avion getAvion() {
+    public Avion getAvion() {
         return avion;
     }
     
@@ -81,10 +81,11 @@ public class Vol {
         this.heureDepart = heureDepart;
     }
 
-    public void setAvion(avion avion) {
+    public void setAvion(Avion avion) {
         this.avion = avion;
     }
     
+    @Override
     public String toString(){
         return "Numero de vol: "+numeroVol+"\n"+"Type de vol: "+type.toString()+"\n"+avion.toString()+"\n"+"Heure d'arrivé: "+heureArrive.toString()+"\n"+"Heure de départ: "+heureDepart.toString()+"\n"+"heure pour faire le plient: "+heurePourPlient.toString()+"\n";
     }
