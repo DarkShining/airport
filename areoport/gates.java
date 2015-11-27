@@ -11,21 +11,6 @@ import static areoport.TypeGates.*;
  *
  * @author elliotthebert
  */
- enum TypeGates{
-     SMALL("porte national"),
-     REGULAR("petite porte international"),
-     BIG("grande porte international")
-     ;
-     
-     private String info;
-     TypeGates(String info){
-         this.info = info;
-     }
-     @Override
-     public String toString(){
-         return info;
-     }
-}
 public class gates {
     private int number;
     private boolean libre;
@@ -35,7 +20,7 @@ public class gates {
     public gates(){
         number = 0;
         libre = true;
-        type = SMALL;
+        type = null;
         vol = null;
     }
     
@@ -79,6 +64,11 @@ public class gates {
     
     public String gatesInfo(){
         String result = "Numero de porte: "+number+"\n"+"Type de porte: "+type.toString();
+        if(vol != null){
+            result += vol.toString();
+        }else{
+            result += "Status de la porte: LIBRE\n";
+        }
         return  result;
     }
 }
